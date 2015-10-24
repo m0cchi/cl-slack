@@ -16,5 +16,5 @@
   (dex:get (format nil "~A~A~A" BASE_URL api-name param)))
 
 (defun to-param (list)
-  (or (format nil "~{&~A=~A~}" optionals)
+  (or (format nil "~{&~A=~A~}" list)
       ""))
