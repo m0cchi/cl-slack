@@ -1,3 +1,5 @@
+(require 'cl-slack.core "./core.lisp")
+
 (provide 'cl-slack.chat)
 
 (defpackage :cl-slack.chat
@@ -32,7 +34,7 @@
                            (text string)
                            (optionals list))
   (cl-slack.core:send "chat.update"
-                      (format nil "?token=~A&ts=~A&channel=~A&text=~A"
+                      (format nil "?token=~A&ts=~A&channel=~A&text=~A~A"
                               (cl-slack.core:token client)
                               ts
                               channel
