@@ -12,7 +12,6 @@
   ((token :accessor token :initarg :token)))
 
 (defun send (api-name param)
-  (format t "~%URL:~A~A~A~%" BASE_URL api-name param)
   (dex:get (format nil "~A~A~A" BASE_URL api-name param)))
 
 (defun to-param (list)
