@@ -1,0 +1,27 @@
+#+title: cl-slack
+Slack API from CommonLisp
+
+#+begin_src CL
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+
+(ql:quickload :dexador :silent t)
+
+(require 'cl-slack.chat "./chat.lisp")
+
+
+(defun main (&rest argv)
+  (declare (ignorable argv))
+  (setq token "xxxx-xxx-xxx-xxx")
+  (setq channel "C000000")
+  (setq client (make-instance 'cl-slack.core:slack-client
+                              :token token))
+  (cl-slack.chat:post-message client
+                              channel
+                              (car argv)
+                              '("as_user" "true")))
+;; ./post.ros MessageText
+#+begin_end
