@@ -2,7 +2,7 @@
 
 (defpackage :cl-slack.core
   (:use :cl)
-  (:export slack-client send token))
+  (:export slack-client send token to-param))
 
 (in-package :cl-slack.core)
 
