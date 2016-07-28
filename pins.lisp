@@ -1,11 +1,3 @@
-(require 'cl-slack.core "./core.lisp")
-
-(provide 'cl-slack.pins)
-
-(defpackage :cl-slack.pins
-  (:use :cl)
-  (:export add fetch-list remove-pin))
-
 (in-package :cl-slack.pins)
 
 (defmethod add ((client cl-slack.core:slack-client)

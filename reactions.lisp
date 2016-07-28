@@ -1,11 +1,3 @@
-(require 'cl-slack.core "./core.lisp")
-
-(provide 'cl-slack.reactions)
-
-(defpackage :cl-slack.reactions
-  (:use :cl)
-  (:export add get-item fetch-list remove-reaction))
-
 (in-package :cl-slack.reactions)
 
 (defmethod add ((client cl-slack.core:slack-client)

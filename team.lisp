@@ -1,11 +1,3 @@
-(require 'cl-slack.core "./core.lisp")
-
-(provide 'cl-slack.team)
-
-(defpackage :cl-slack.team
-  (:use :cl)
-  (:export fetch-info fetch-access-logs))
-
 (in-package :cl-slack.team)
 
 (defmethod fetch-access-logs ((client cl-slack.core:slack-client)
