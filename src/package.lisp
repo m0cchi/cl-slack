@@ -1,7 +1,8 @@
 ;;;; package.lisp
 
 (defpackage #:cl-slack
-  (:use #:cl #:dexador))
+  (:use #:cl #:dexador)
+  (:shadow :get :delete))
 
 (defpackage :cl-slack.core
   (:use :cl)
