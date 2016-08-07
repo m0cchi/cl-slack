@@ -17,17 +17,15 @@ ln -s $(pwd)/cl-slack.asd $HOME/.roswell/ALL/ALL/quicklisp/quicklisp/
 exec ros -Q -- $0 "$@"
 |#
 
-(ql:quickload :dexador :silent t)
+(ql:quickload :cl-slack :silent t)
 
-(require 'cl-slack.chat "./chat.lisp")
-
+(defvar token "xxxx-xxx-xxx-xxx")
+(defvar channel "C000000")
+(defvar client (make-instance 'cl-slack.core:slack-client
+                              :token token))
 
 (defun main (&rest argv)
   (declare (ignorable argv))
-  (setq token "xxxx-xxx-xxx-xxx")
-  (setq channel "C000000")
-  (setq client (make-instance 'cl-slack.core:slack-client
-                              :token token))
   (cl-slack.chat:post-message client
                               channel
                               (car argv)
