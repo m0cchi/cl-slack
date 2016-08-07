@@ -1,11 +1,3 @@
-(require 'cl-slack.core "./core.lisp")
-
-(provide 'cl-slack.chat)
-
-(defpackage :cl-slack.chat
-  (:use :cl)
-  (:export delete-message post-message update-message))
-
 (in-package :cl-slack.chat)
 
 (defmethod delete-message ((client cl-slack.core:slack-client)

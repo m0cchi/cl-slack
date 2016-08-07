@@ -1,11 +1,3 @@
-(require 'cl-slack.core "./core.lisp")
-
-(provide 'cl-slack.rtm)
-
-(defpackage :cl-slack.rtm
-  (:use :cl)
-  (:export start))
-
 (in-package :cl-slack.rtm)
 
 (defmethod start ((client cl-slack.core:slack-client)

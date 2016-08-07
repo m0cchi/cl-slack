@@ -1,9 +1,3 @@
-(provide 'cl-slack.core)
-
-(defpackage :cl-slack.core
-  (:use :cl)
-  (:export slack-client send token to-param))
-
 (in-package :cl-slack.core)
 
 (defvar BASE_URL "https://slack.com/api/")
