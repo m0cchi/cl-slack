@@ -2,14 +2,18 @@
 Slack API from CommonLisp
 
 * how to use
-#+begin_src bash
+
 #brew install roswell
+
 git clone https://github.com/m0cchi/cl-slack
+
 cd cl-slack
+
 ln -s $(pwd)/cl-slack.asd $HOME/.roswell/ALL/ALL/quicklisp/quicklisp/
-#+begin_end
+
 
 * sample code
+
 #+begin_src CL
 #!/bin/sh
 #|-*- mode:lisp -*-|#
