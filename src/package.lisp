@@ -36,3 +36,10 @@
 (defpackage :cl-slack.team
   (:use :cl)
   (:export fetch-info fetch-access-logs))
+
+(defpackage :cl-slack.channels
+  (:use :cl)
+  (:shadow list)
+  (:export archive create info invite join kick leave 
+           mark rename replies set-purpose set-topic
+           unarchive history list))
